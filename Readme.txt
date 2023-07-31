@@ -1,0 +1,36 @@
+This VBA module helps you generate SQL statements from data in an Excel file and save them to a text file. It can be handy when you want to convert your Excel data into SQL commands for database operations.
+
+Here's how to use it:
+
+1. Open your Excel file and press "Alt + F11" to access the VBA editor.
+2. In the editor, click on "Insert" from the top menu and choose "Module." This will create a new module called "Module4."
+3. Copy the entire code provided in the "Module4" and paste it into your newly created module.
+4. Now, you can run the main procedure "GenerateSQL" by clicking "Run" or pressing "F5." A pop-up window will ask you for some inputs:
+   - Enter the path of your Excel file (e.g., C:\Users\yourname\Documents\YourExcelFile.xls).
+   - Enter the path of the output text file where you want to save the generated SQL (e.g., C:\Users\yourname\Documents\Output.txt).
+   - Optionally, specify if you want to filter rows based on a specific keyword (e.g., "yes" or "no"). If you choose "yes," it will ask you to enter the keyword to filter rows (e.g., "zm").
+5. After providing the inputs, the VBA code will open your Excel file, extract data based on your specified ranges, and generate SQL statements for creating a table and inserting data.
+6. The generated SQL statements will be saved in the output text file you specified.
+7. The code will also handle Polish special characters in your data to ensure compatibility with SQL.
+
+Make sure to have a backup of your Excel file before running the code, just in case. This tool can save you time when dealing with large datasets and needing SQL commands for database interactions.
+
+
+NOTE: it was made to handle polish characters, adapt the code if needed.
+
+To pozwala na generowanie instrukcji SQL z danych zawartych w pliku Excel i zapisywanie ich do pliku tekstowego. Przyda się, gdy chcesz przekształcić dane z arkusza Excela na instrukcje SQL do operacji na bazie danych.
+
+Instrukcje, jak to użyć:
+
+1. Otwórz plik Excela i wciśnij "Alt + F11", aby uzyskać dostęp do edytora VBA.
+2. W edytorze, kliknij "Insert" w górnym menu, a następnie wybierz "Module". Spowoduje to utworzenie nowego modułu o nazwie "Module4".
+3. Skopiuj cały kod dostarczony w "Module4" i wklej go do nowo utworzonego modułu.
+4. Teraz możesz uruchomić główną procedurę "GenerateSQL", klikając "Run" lub naciskając "F5". Pojawi się okno z prośbą o podanie kilku informacji:
+   - Wprowadź ścieżkę do Twojego pliku Excela (np. C:\Users\nazwaużytkownika\Dokumenty\TwójPlikExcel.xls).
+   - Wprowadź ścieżkę do pliku tekstowego, w którym chcesz zapisać wygenerowane instrukcje SQL (np. C:\Users\nazwaużytkownika\Dokumenty\Output.txt).
+   - Opcjonalnie, określ, czy chcesz filtrować wiersze na podstawie określonego słowa kluczowego (np. "yes" lub "no"). Jeśli wybierzesz "yes", zostaniesz poproszony o wprowadzenie słowa kluczowego do filtrowania wierszy>
+5. Po podaniu informacji, kod VBA otworzy Twój plik Excela, wydobędzie dane na podstawie określonych zakresów i wygeneruje instrukcje SQL do tworzenia tabeli i wstawiania danych.
+6. Wygenerowane instrukcje SQL zostaną zapisane w pliku tekstowym, który wcześniej podałeś jako wynik.
+7. Kod również poradzi sobie z polskimi znakami specjalnymi w Twoich danych, aby zapewnić kompatybilność z SQL.
+
+Upewnij się, że masz kopię zapasową swojego pliku Excela przed uruchomieniem kodu, na wszelki wypadek. To narzędzie może zaoszczędzić Ci czas, gdy masz do czynienia z dużymi zestawami danych i potrzebujesz instrukcji SQL do interakcji z bazą danych.
