@@ -13,7 +13,7 @@ Sub GenerateSQL()
     Dim fso As Object
     Dim outputFile As Object
     
-    filename = "C:\Users\gbray\Desktop\data\PROJECT3_work_schedule\TP1 KAZIMIERZ i JULIUSZ GRAFIK 2022-2023-wraz z remontami agata.xls"
+    filename = "C:\Users\name\Desktop\data\PROJECT3_work_schedule\ex.xls"
     
     ' Create a FileSystemObject
     Set fso = CreateObject("Scripting.FileSystemObject")
