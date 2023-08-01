@@ -16,8 +16,8 @@ Sub GenerateSQL()
     Dim useFilter As String
 
     ' Get the user's input
-    filename = InputBox("Enter the path of the Excel file:", "Input Required", "C:\Users\gbray\Desktop\data\PROJECT3_work_schedule\TP1 KAZIMIERZ i JULIUSZ GRAFIK 2022-2023-wraz z remontami agata.xls")
-    outputFile = InputBox("Enter the path of the output text file:", "Input Required", "C:\Users\gbray\Desktop\output.txt")
+    filename = InputBox("Enter the path of the Excel file:", "Input Required", "C:\Users\name\Desktop\data\Pex.xls")
+    outputFile = InputBox("Enter the path of the output text file:", "Input Required", "C:\Users\name\Desktop\output.txt")
     useFilter = InputBox("Do you want to skip rows without a specific keyword? (yes/no)", "Input Required", "no")
 
     If LCase(useFilter) = "yes" Then
