@@ -139,15 +139,15 @@ Sub WriteToFile(filename As String, text As String)
 End Sub
 
 Function ReplaceSpecialCharacters(str As String) As String
-    str = Replace(str, "ê", "e")
-    str = Replace(str, "¹", "a")
-    str = Replace(str, "ñ", "n")
-    str = Replace(str, "¿", "z")
-    str = Replace(str, "Ÿ", "z")
-    str = Replace(str, "œ", "s")
-    str = Replace(str, "æ", "c")
-    str = Replace(str, "ó", "o")
-    str = Replace(str, "³", "l")
+    str = Replace(str, "Ä™", "e")
+    str = Replace(str, "Ä…", "a")
+    str = Replace(str, "Å„", "n")
+    str = Replace(str, "Å¼", "z")
+    str = Replace(str, "Åº", "z")
+    str = Replace(str, "Å›", "s")
+    str = Replace(str, "Ä‡", "c")
+    str = Replace(str, "Ã³", "o")
+    str = Replace(str, "Å‚", "l")
     
     ReplaceSpecialCharacters = str
 End Function
