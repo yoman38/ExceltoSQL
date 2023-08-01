@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module4"
+Attribute VB_Name = "MS_SQL_VBA"
 Option Explicit
 
 Sub GenerateSQL()
