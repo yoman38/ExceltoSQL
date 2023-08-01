@@ -22,8 +22,8 @@ Sub GenerateSQL()
     Dim emptyCheckRange As Range
 
     ' Prompt user for necessary inputs
-    filename = GetUserInput("Enter the path of the Excel file:", "C:\Users\gbray\Desktop\data\PROJECT3_work_schedule\TP1 KAZIMIERZ i JULIUSZ GRAFIK 2022-2023-wraz z remontami agata.xls")
-    outputFile = GetUserInput("Enter the path of the output text file:", "C:\Users\gbray\Desktop\output.txt")
+    filename = GetUserInput("Enter the path of the Excel file:", "C:\Users\name\Desktop\data\PROJECT3_work_schedule\ex.xls")
+    outputFile = GetUserInput("Enter the path of the output text file:", "C:\Users\name\Desktop\output.txt")
     useFilter = GetUserInput("Do you want to skip rows without a specific keyword? (yes/no)", "no")
 
     If LCase(useFilter) = "yes" Then
@@ -187,26 +187,26 @@ End Sub
 
 Function ReplaceSpecialCharacters(str As String) As String
     ' Lower case
-    str = Replace(str, "Í", "e")
-    str = Replace(str, "π", "a")
-    str = Replace(str, "Ò", "n")
-    str = Replace(str, "ø", "z")
-    str = Replace(str, "ü", "z")
-    str = Replace(str, "ú", "s")
-    str = Replace(str, "Ê", "c")
-    str = Replace(str, "Û", "o")
-    str = Replace(str, "≥", "l")
+    str = Replace(str, "√™", "e")
+    str = Replace(str, "¬π", "a")
+    str = Replace(str, "√±", "n")
+    str = Replace(str, "¬ø", "z")
+    str = Replace(str, "≈∏", "z")
+    str = Replace(str, "≈ì", "s")
+    str = Replace(str, "√¶", "c")
+    str = Replace(str, "√≥", "o")
+    str = Replace(str, "¬≥", "l")
     
     ' Upper case
-    str = Replace(str, " ", "E")
-    str = Replace(str, "•", "A")
-    str = Replace(str, "—", "N")
-    str = Replace(str, "Ø", "Z")
-    str = Replace(str, "è", "Z")
-    str = Replace(str, "å", "S")
-    str = Replace(str, "∆", "C")
-    str = Replace(str, "”", "O")
-    str = Replace(str, "£", "L")
+    str = Replace(str, "√ä", "E")
+    str = Replace(str, "¬•", "A")
+    str = Replace(str, "√ë", "N")
+    str = Replace(str, "¬Ø", "Z")
+    str = Replace(str, "¬è", "Z")
+    str = Replace(str, "≈í", "S")
+    str = Replace(str, "√Ü", "C")
+    str = Replace(str, "√ì", "O")
+    str = Replace(str, "¬£", "L")
 
     ReplaceSpecialCharacters = str
 End Function
