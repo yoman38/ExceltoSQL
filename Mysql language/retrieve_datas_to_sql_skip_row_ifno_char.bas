@@ -19,7 +19,7 @@ Sub GenerateSQL()
     Set fso = CreateObject("Scripting.FileSystemObject")
     
     ' Open the file for output
-    Set outputFile = fso.CreateTextFile("C:\Users\gbray\Desktop\output3.txt", True)
+    Set outputFile = fso.CreateTextFile("C:\Users\bamr\Desktop\output3.txt", True)
     
     ' Open the workbook
     Set wb = Workbooks.Open(filename)
