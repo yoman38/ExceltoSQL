@@ -1,5 +1,3 @@
-Attribute VB_Name = "Module3"
-
 Option Explicit
 
 ' Constants for User Prompts
@@ -93,26 +91,26 @@ Sub GenerateSQL()
 
     ' Get the range for data and headers
     Set rngData = SelectRange(ws, "Select the data range.")
-    Set rngHeaders = SelectRange(ws, "Select the headers range.")
+    Set rngHeaders = SelectRange(ws, "Select the headers range. (Try to give it the same number of columns as the data range)")
 
 
     ' Ask if the user wants to use filters
     useFilter = GetUserResponse("Do you want to skip rows without a specific keyword? (yes/no)", PROMPT_NO) = PROMPT_YES
     If useFilter Then
         filterKeyword = GetUserInput("Enter the keyword to filter rows.")
-        Set rngFilter = SelectRange(ws, "Select the range for filtering.")
+        Set rngFilter = SelectRange(ws, "Select the range for filtering. (Try to give it the same number of rows as the data range)")
     End If
 
     ' Ask if the user wants to check for duplicates
     useDuplicatesCheck = GetUserResponse("Do you want to skip duplicate rows based on specific columns? (yes/no)", PROMPT_NO) = PROMPT_YES
     If useDuplicatesCheck Then
-        Set rngDuplicateCheck = SelectRange(ws, "Select the range for checking duplicates.")
+        Set rngDuplicateCheck = SelectRange(ws, "Select the range for checking duplicates. (Try to give it the same number of rows as the data range)")
     End If
 
     ' Ask if the user wants to skip rows with empty cells in a specific range
     skipEmpty = GetUserResponse("Do you want to skip rows with empty cells in a specific range? (yes/no)", PROMPT_NO) = PROMPT_YES
     If skipEmpty Then
-        Set rngEmptyCheck = SelectRange(ws, "Select the range for checking empty cells.")
+        Set rngEmptyCheck = SelectRange(ws, "Select the range for checking empty cells. (Try to give it the same number of rows as the data range)")
     End If
 
       ' Ask if the user wants to include a unique ID column
@@ -129,7 +127,7 @@ Sub GenerateSQL()
     wb.Close SaveChanges:=False
 
     ' Show success message
-    MsgBox "SQL generation complete! Don't forget to change column types. The output was written to " & outputFilePath, vbInformation, "Success"
+    MsgBox "SQL query generation complete! Don't forget to change column types. The output was written to " & outputFilePath, vbInformation, "Success"
 End Sub
 
 ' Function to show an input box and return the user's input
@@ -353,26 +351,26 @@ End Sub
 
 Function ReplaceSpecialCharacters(str As String) As String
     ' Lower case
-    str = Replace(str, "Í", "e")
-    str = Replace(str, "π", "a")
-    str = Replace(str, "Ò", "n")
-    str = Replace(str, "ø", "z")
-    str = Replace(str, "ü", "z")
-    str = Replace(str, "ú", "s")
-    str = Replace(str, "Ê", "c")
-    str = Replace(str, "Û", "o")
-    str = Replace(str, "≥", "l")
+    str = Replace(str, "√™", "e")
+    str = Replace(str, "¬π", "a")
+    str = Replace(str, "√±", "n")
+    str = Replace(str, "¬ø", "z")
+    str = Replace(str, "¬ü", "z")
+    str = Replace(str, "¬ú", "s")
+    str = Replace(str, "√¶", "c")
+    str = Replace(str, "√≥", "o")
+    str = Replace(str, "¬≥", "l")
     
     ' Upper case
-    str = Replace(str, " ", "E")
-    str = Replace(str, "•", "A")
-    str = Replace(str, "—", "N")
-    str = Replace(str, "Ø", "Z")
-    str = Replace(str, "è", "Z")
-    str = Replace(str, "å", "S")
-    str = Replace(str, "∆", "C")
-    str = Replace(str, "”", "O")
-    str = Replace(str, "£", "L")
+    str = Replace(str, "√ä", "E")
+    str = Replace(str, "¬•", "A")
+    str = Replace(str, "√ë", "N")
+    str = Replace(str, "¬Ø", "Z")
+    str = Replace(str, "¬è", "Z")
+    str = Replace(str, "¬å", "S")
+    str = Replace(str, "√Ü", "C")
+    str = Replace(str, "√ì", "O")
+    str = Replace(str, "¬£", "L")
 
     ReplaceSpecialCharacters = str
 End Function
