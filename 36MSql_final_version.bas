@@ -351,29 +351,30 @@ End Sub
 
 Function ReplaceSpecialCharacters(str As String) As String
     ' Lower case
-    str = Replace(str, "ê", "e")
-    str = Replace(str, "¹", "a")
-    str = Replace(str, "ñ", "n")
-    str = Replace(str, "¿", "z")
-    str = Replace(str, "", "z")
-    str = Replace(str, "", "s")
-    str = Replace(str, "æ", "c")
+    str = Replace(str, "ę", "e")
+    str = Replace(str, "ą", "a")
+    str = Replace(str, "ń", "n")
+    str = Replace(str, "ż", "z")
+    str = Replace(str, "ź", "z")
+    str = Replace(str, "ś", "s")
+    str = Replace(str, "ć", "c")
     str = Replace(str, "ó", "o")
-    str = Replace(str, "³", "l")
+    str = Replace(str, "ł", "l")
     
     ' Upper case
-    str = Replace(str, "Ê", "E")
-    str = Replace(str, "¥", "A")
-    str = Replace(str, "Ñ", "N")
-    str = Replace(str, "¯", "Z")
-    str = Replace(str, "", "Z")
-    str = Replace(str, "", "S")
-    str = Replace(str, "Æ", "C")
+    str = Replace(str, "Ę", "E")
+    str = Replace(str, "Ą", "A")
+    str = Replace(str, "Ń", "N")
+    str = Replace(str, "Ż", "Z")
+    str = Replace(str, "Ź", "Z")
+    str = Replace(str, "Ś", "S")
+    str = Replace(str, "Ć", "C")
     str = Replace(str, "Ó", "O")
-    str = Replace(str, "£", "L")
+    str = Replace(str, "Ł", "L")
 
     ReplaceSpecialCharacters = str
 End Function
+
 ' Function to extract the base name from a file path
 Function GetBaseName(filePath As String) As String
     Set fso = CreateObject("Scripting.FileSystemObject")
