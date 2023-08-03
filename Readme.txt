@@ -3,12 +3,17 @@ This VBA module helps you generate SQL statements from data in an Excel file and
 Here's how to use it:
 
 1. Open your Excel file and press "Alt + F11" to access the VBA editor.
-2. In the editor, click on "Insert" from the top menu and choose "Module." This will create a new module called "Module4."
-3. Copy the entire code provided in the "Module4" and paste it into your newly created module.
+2. In the editor, click on "Insert" from the top menu and choose "Module." This will create a new module called "ModuleX"
+3. Copy the entire code provided in the "ModuleX" and paste it into your newly created module. You might need to delete the declaration before option explicit.
 4. Now, you can run the main procedure "GenerateSQL" by clicking "Run" or pressing "F5." A pop-up window will ask you for some inputs:
-   - Enter the path of your Excel file (e.g., C:\Users\yourname\Documents\YourExcelFile.xls).
-   - Enter the path of the output text file where you want to save the generated SQL (e.g., C:\Users\yourname\Documents\Output.txt).
-   - Optionally, specify if you want to filter rows based on a specific keyword (e.g., "yes" or "no"). If you choose "yes," it will ask you to enter the keyword to filter rows (e.g., "zm").
+   - Enter the path of your Excel file (e.g., C:\Users\yourname\Documents\YourExcelFile.xls). > NOW AUTOMATIC
+   - Enter the path of the output text file where you want to save the generated SQL (e.g., C:\Users\yourname\Documents\Output.txt). > NOW AUTOMATIC
+   - Optionally, specify if you want to filter rows based on a specific keyword (e.g., "yes" or "no"). If you choose "yes," it will ask you to enter the keyword to filter rows (e.g., "zm"). 
+     This will only retrieve rows containing the keyword.
+   - Optionnally, you can avoid the rows containing duplicates entry.
+   - Optionnally, you can avoid the rows containing empty cells.
+   - Optionnally, you can generate an ID. Note that the ID will be generated in Microsoft SQL Server and not in VBA (no loop). The ID consists of a simple increment starting from 1. 
+     You can change the function in the output or in VBA to use a random number using NEWID or NEWSEQUENTIALID.
 5. After providing the inputs, the VBA code will open your Excel file, extract data based on your specified ranges, and generate SQL statements for creating a table and inserting data.
 6. The generated SQL statements will be saved in the output text file you specified.
 7. The code will also handle Polish special characters in your data to ensure compatibility with SQL.
