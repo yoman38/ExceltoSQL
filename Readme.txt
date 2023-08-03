@@ -16,6 +16,7 @@ Here's how to use it:
 
 7. COPY PASTE THE CONTENT IN TXT FILE TO MICROSOFT SQL QUERY
 
+**WIP : EXCEPTION HANDLING, allow the users to leave the program at any time.
 ______
 Older version
 
