@@ -1,5 +1,24 @@
 This VBA module helps you generate SQL statements from data in an Excel file and save them to a text file. It can be handy when you want to convert your Excel data into SQL commands for database operations.
 
+NEW RELEASE > NOW EASIER TO USE
+Here's how to use it:
+0. INSTALLATION // Just download xlsm file. 
+1. RUN the main procedure "GenerateSQL" by clicking "Run" button.
+2. A pop-up window will ask you for some inputs: - Choose your Excel file 
+3. Choose the output text file where you want to save the generated. Then choose the name pf the txt file. 
+- Optionally, specify if you want to filter rows based on a specific keyword (e.g., "yes" or "no"). If you choose "yes," it will ask you to enter the keyword to filter rows (e.g., "zm"). This will only retrieve rows containing the keyword. 
+- Optionnally, you can avoid the rows containing duplicates entry. 
+- Optionnally, you can avoid the rows containing empty cells. 
+- Optionnally, you can generate an ID. Note that the ID will be generated in Microsoft SQL Server and not in VBA (no loop). The ID consists of a simple increment starting from 1. You can change the function in the output or in VBA to use a random number using NEWID or NEWSEQUENTIALID. 
+4. After providing the inputs, the VBA code will open your Excel file, extract data based on your specified ranges, and generate SQL statements for creating a table and inserting data. 
+5. The generated SQL statements will be saved in the output text file you specified. 
+6. The code will also handle Polish special characters in your data to ensure compatibility with SQL. 
+
+7. COPY PASTE THE CONTENT IN TXT FILE TO MICROSOFT SQL QUERY
+
+______
+Older version
+
 Here's how to use it:
 
 1. Open your Excel file and press "Alt + F11" to access the VBA editor.
