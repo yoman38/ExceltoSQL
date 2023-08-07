@@ -17,6 +17,40 @@ Here's how to use it:
 7. COPY PASTE THE CONTENT IN TXT FILE TO MICROSOFT SQL QUERY
 
 **WIP : EXCEPTION HANDLING, allow the users to leave the program at any time.
+
+
+////// AUTOMATIC TXT TO SQL CONVERTER
+VBA Code Overview for Microsoft Access and SQL Server Integration
+
+1. Introduction:
+This VBA module provides functionalities to connect to a SQL Server database, fetch and display user tables, and execute SQL statements from a selected `.txt` file. Users can also specify the server and database names for a custom connection.
+
+2. Functions and Procedures:
+
+- ConnectToSQL(serverName, dbName): 
+  Connects to the specified SQL Server and database. Returns a Boolean indicating success or failure.
+
+- GetTableNames(): 
+  Fetches the names of user tables in the connected SQL Server database and returns them as a concatenated string.
+
+- DeleteTableIfExists(tableName): 
+  Deletes the specified table from the SQL Server database if it exists.
+
+- UpdateSQLWithTxtContent(): 
+  This is the primary procedure. It prompts the user for server and database names, shows existing user tables, asks for a `.txt` file containing SQL commands, and executes the SQL commands.
+
+- GetQueryFromTxt(filePath): 
+  Reads and returns the content of the specified `.txt` file.
+
+3. Usage:
+To use the module, integrate it into an Access VBA project. Users can run the `UpdateSQLWithTxtContent` procedure, either directly or by attaching it to a form button, to start the process.
+
+4. Notes:
+- Ensure all functions and procedures are in the same VBA module.
+- Before executing a new table creation, the script will check if a table with the same name already exists and will delete it. This can lead to data loss, so use with caution.
+- System tables and tables from special schemas are excluded from the table list display.
+
+
 ______
 Older version
 
