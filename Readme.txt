@@ -14,9 +14,58 @@ Here's how to use it:
 5. The generated SQL statements will be saved in the output text file you specified. 
 6. The code will also handle Polish special characters in your data to ensure compatibility with SQL. 
 
-7. COPY PASTE THE CONTENT IN TXT FILE TO MICROSOFT SQL QUERY
+7. Automatic connection to SQL Server.
 
-**WIP : EXCEPTION HANDLING, allow the users to leave the program at any time.
+______
+
+The following questions are asked before creating an output:
+	Do you want to skip rows without a specific keyword? : allow to skip rows. For example, if some lines are duplicate
+1 / Michael / 123
+2 / Julius / 456
+1 / Michael / 123
+1 / Olga / 789
+If we choose column A keyword “1” to get:
+1 / Michael / 123
+1 / Michael / 123
+1 / Olga / 789
+                
+Or column C keyword “123”:
+1 / Michael / 123
+1 / Michael / 123
+
+	Do you want to skip duplicate rows based on specific columns? Same example, let’s choose column A:
+1 / Michael / 123
+2 / Julius / 456
+
+And column C:
+1 / Michael / 123
+2 / Julius / 456
+1 / Olga / 789
+
+	Do you want to skip rows with empty cells in a specific range? It works the same way.
+
+	"Do you want to add a unique ID for each row in the table?”.
+It creates a column "[Id] [int] IDENTITY(1,1) NOT NULL, "
+
+	Do you want to set a Primary Key for the table? 
+Allow to select multiple columns, set them to NOT NULL then ‘ALTER TABLE … ADD PRIMARY KEY ….’ statement. 
+
+	"Do you want to add a Foreign Key?"
+Allow to select one column, set it to NOT NULL, write the reference table and column, then ‘ALTER TABLE … ADD FOREIGN KEY … REFERENCES …’ statement. 
+
+	"Do you want to set other columns to NOT NULL?"
+ALTER TABLE … ALTER COLUMN … NOT NULL statement. 
+
+	"Do you want to add an Index?"
+Allow to choose between "Non-clustered" "Clustered” "Unique Non-clustered with Sort Order". Then select columns to either ‘CREATE INDEX’ / CREATE CLUSTERED INDEX / CREATE UNIQUE INDEX … ON …. DESC … (or ASC) . 
+
+	"Do you want to add a Constraint?
+ALTER TABLE … ADD CONSTRAINT … (unique or check for example)
+
+	"Do you want to set a Default Value for any column?"
+ALTER TABLE … ADD CONSTRAINT … DEFAULT … FOR …
+
+
 
 
 ////// AUTOMATIC TXT TO SQL CONVERTER
