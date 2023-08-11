@@ -15,7 +15,7 @@ This VBA module simplifies the conversion of Excel data into SQL commands, aidin
 - Define NOT NULL constraints for columns.
 - Implement indexes and constraints within the table.
 - Assign default values to columns.
-- Seamless handling of european languages (using latin alphabet) special characters for SQL compatibility.
+- Seamless handling of european languages special characters for SQL compatibility.
 - Directly connect to SQL Server and execute SQL statements from a `.txt` file.
 - Safeguard data by removing existing tables before creating new ones.
 
@@ -95,6 +95,9 @@ The updated version offers improved user-friendliness. Here's how to utilize it:
 - Enabled entering multiple filter words.
 - Data range is now selected for filter range by default.
 - Now handle all europeans languages with a latin alphabet, not just polish
+
+### v3.43
+- Now handle Russian, Ukrainian, Greek, etc. Converted alphabet to their latin counterpart to make it work in sql.
 
 ### Additional Enhancements
 - Included additional prompts for clear guidance and options.
