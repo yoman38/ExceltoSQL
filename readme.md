@@ -94,6 +94,7 @@ The updated version offers improved user-friendliness. Here's how to utilize it:
 - Enhanced prompts for better user comprehension.
 - Enabled entering multiple filter words.
 - Data range is now selected for filter range by default.
+- Now handle all europeans languages with a latin alphabet, not just polish
 
 ### Additional Enhancements
 - Included additional prompts for clear guidance and options.
