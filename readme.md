@@ -104,8 +104,6 @@ The subsequent section details additional intricacies and explains each feature 
 
 ---
 
-Certainly, here's the continued README with the provided additional details and the new release information:
-
 ---
 
 ## Additional Details
