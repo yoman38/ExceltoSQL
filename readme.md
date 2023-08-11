@@ -15,7 +15,7 @@ This VBA module simplifies the conversion of Excel data into SQL commands, aidin
 - Define NOT NULL constraints for columns.
 - Implement indexes and constraints within the table.
 - Assign default values to columns.
-- Seamless handling of Polish special characters for SQL compatibility.
+- Seamless handling of european languages (using latin alphabet) special characters for SQL compatibility.
 - Directly connect to SQL Server and execute SQL statements from a `.txt` file.
 - Safeguard data by removing existing tables before creating new ones.
 
