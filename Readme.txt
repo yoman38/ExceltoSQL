@@ -1,3 +1,58 @@
+
+
+# Excel to SQL Command Generator VBA Module
+
+This VBA module is designed to assist in generating SQL statements from data in an Excel file and saving them to a text file. It streamlines the process of converting Excel data into SQL commands for database operations.
+
+## Features
+
+- Generate SQL commands for creating tables and inserting data.
+- Specify an Excel file and an output text file for the generated SQL commands.
+- Filter rows based on specific keywords.
+- Skip duplicate rows based on chosen columns.
+- Skip rows with empty cells in a specified range.
+- Generate unique IDs for rows.
+- Set primary keys for the table.
+- Set foreign keys for the table.
+- Set columns to NOT NULL.
+- Add indexes and constraints to the table.
+- Set default values for columns.
+- Automatically handle Polish special characters in data for SQL compatibility.
+- Connect to SQL Server and execute SQL statements from a `.txt` file.
+- Delete existing tables before creating new ones to avoid data loss.
+
+## Installation and Usage
+
+1. **Installation**: Download the provided `.xlsm` file.
+
+2. **Usage**:
+   - Open the downloaded `.xlsm` file in Excel.
+   - Press "Alt + F11" to access the VBA editor.
+   - Click on "Insert" from the top menu and choose "Module." This will create a new module.
+   - Copy and paste the entire code provided into the newly created module.
+   - Run the main procedure "GenerateSQL" by clicking "Run" or pressing "F5."
+   - Follow the prompts and input the required information, including Excel file path, output text file path, filtering options, unique IDs, keys, constraints, indexes, and more.
+   - The VBA code will handle the Excel data and generate SQL statements as specified.
+   - The generated SQL statements will be saved in the output text file.
+
+## Important Notes
+
+- **Backup**: Before running the code, ensure you have a backup of your Excel file. The code performs data operations that might modify your Excel data.
+- **Sheet Selection**: The code might create issues if the active sheet is not the one intended for processing. Use the "RESTRICTION" mode for accurate results.
+- **Mixed Data Type Detection**: In version v2, mixed data type detection was corrected to NVARCHAR.
+- **Clarity and Prompting**: The code was enhanced in versions v3 and v4 for better user prompts and clarity during execution.
+- **Review Generated SQL**: The code might automatically open the generated output text file for your review before uploading.
+
+---
+
+Just like before, replace `[your-email@example.com](mailto:your-email@example.com)` with your actual email address in the "Contact" section. This README provides basic instructions and explanations for users who want to use your VBA module. Customize it further based on your needs and audience.
+
+
+
+
+__________
+Older statements
+
 This VBA module helps you generate SQL statements from data in an Excel file and save them to a text file. It can be handy when you want to convert your Excel data into SQL commands for database operations.
 
 NEW RELEASE > NOW EASIER TO USE
