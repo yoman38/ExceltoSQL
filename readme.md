@@ -2,6 +2,9 @@
 
 This VBA module simplifies the conversion of Excel data into SQL commands, aiding in generating SQL statements from Excel files and storing them in text format. Its purpose is to expedite the process of transforming Excel data into SQL queries for database operations.
 
+![Zrzut ekranu 2023-08-17 090324](https://github.com/yoman38/ExceltoSQL/assets/124726056/8fcb5a8d-61cc-46ff-b445-34db1d939871)
+
+
 ## Key Features
 
 - Generate SQL commands for table creation and data insertion.
